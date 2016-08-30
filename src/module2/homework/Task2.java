@@ -2,11 +2,11 @@ package module2.homework;
 
 public class Task2 {
 
-    public static void withdrawMoney (double balance, double withdrawal){
+    public static void withdrawMoney(double balance, double withdrawal){
         double commision = 0.05;
         double balanceAfterWithdraw = balance - withdrawal * (1 + commision);
 
-        if (balanceAfterWithdraw > 0)
+        if (balanceAfterWithdraw >= 0)
           System.out.println("OK " + commision + " " + balanceAfterWithdraw);
         else System.out.println("NO");
     }
