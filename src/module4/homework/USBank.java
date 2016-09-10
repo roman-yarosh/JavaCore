@@ -8,37 +8,30 @@ public class USBank extends Bank {
 
     @Override
     int getLimitOfWithdrawal() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        if (getCurrency() == Currency.USD) return 1000;
+        else return 1200;
     }
 
     @Override
     int getLimitOfFunding() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        if (getCurrency() == Currency.EUR) return 10000;
+        else return -1;
     }
 
     @Override
-    int getMonthlyRate() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    double getMonthlyRate() {
+        if (getCurrency() == Currency.USD) return 0.01;
+        else return 0.02;
     }
 
     @Override
-    int getCommission(int summ) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    double getCommission(int summ) {
+        if (getCurrency() == Currency.USD) {
+            if (summ <= 1000) return 0.05;
+            else return 0.07;
+        } else {
+            if (summ <= 1000) return 0.06;
+            else return 0.08;
+        }
     }
-
-
-  /*
-    @Override
-    public String toString() {
-        return "Bank{" +
-                "id=" + super.getId() +
-                ", bankCountry=" + super.getBankCountry() +
-                ", currency=" + super.getCurrency() +
-                ", numberOfEmployees=" + super.getNumberOfEmployees() +
-                ", avrSalaryOfEmployee=" + super.getAvrSalaryOfEmployee() +
-                ", rating=" + super.getRating() +
-                ", totalCapital=" + super.getTotalCapital() +
-                '}';
-    }
-    */
 }

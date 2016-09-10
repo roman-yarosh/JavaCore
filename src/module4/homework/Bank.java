@@ -14,9 +14,9 @@ public abstract class Bank {
 
     abstract int getLimitOfFunding();
 
-    abstract int getMonthlyRate();
+    abstract double getMonthlyRate();
 
-    abstract int getCommission(int summ);
+    abstract double getCommission(int summ);
 
     double moneyPaidMonthlyForSalary(){
         return numberOfEmployees * avrSalaryOfEmployee;
@@ -86,5 +86,18 @@ public abstract class Bank {
 
     public void setTotalCapital(long totalCapital) {
         this.totalCapital = totalCapital;
+    }
+
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "id=" + id +
+                ", bankCountry='" + bankCountry + '\'' +
+                ", currency=" + currency +
+                ", numberOfEmployees=" + numberOfEmployees +
+                ", avrSalaryOfEmployee=" + avrSalaryOfEmployee +
+                ", rating=" + rating +
+                ", totalCapital=" + totalCapital +
+                '}';
     }
 }
