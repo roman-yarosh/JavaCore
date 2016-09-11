@@ -34,4 +34,5 @@ public class ChinaBank extends Bank {
             else return 0.11;
         }
     }
+
 }

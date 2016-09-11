@@ -34,4 +34,5 @@ public class EUBank extends Bank {
             else return 0.04;
         }
     }
+
 }

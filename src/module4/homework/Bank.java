@@ -100,4 +100,5 @@ public abstract class Bank {
                 ", totalCapital=" + totalCapital +
                 '}';
     }
+
 }
