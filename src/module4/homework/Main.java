@@ -57,34 +57,50 @@ public class Main {
         //User{id=2, name='Ted', balance=2500.0, monthsOfEmployment=6, companyName='City', salary=5000, bank=Bank{id=2, bankCountry='USA', currency=USD, numberOfEmployees=3000, avrSalaryOfEmployee=5000.0, rating=6000, totalCapital=15000000000}}
 
         bankSystem.withdrawOfUser(user2, 1500);
+        //Limit of withdrawal is exceeded! Limit = 1000, withdrawal = 1605.0
         System.out.println(user2);
+        //User{id=2, name='Ted', balance=2500.0, monthsOfEmployment=6, companyName='City', salary=5000, bank=Bank{id=2, bankCountry='USA', currency=USD, numberOfEmployees=3000, avrSalaryOfEmployee=5000.0, rating=6000, totalCapital=15000000000}}
         bankSystem.paySalary(user2);
         System.out.println(user2);
+        //User{id=2, name='Ted', balance=7150.0, monthsOfEmployment=6, companyName='City', salary=5000, bank=Bank{id=2, bankCountry='USA', currency=USD, numberOfEmployees=3000, avrSalaryOfEmployee=5000.0, rating=6000, totalCapital=15000000000}}
         bankSystem.fundUser(user2, 1000);
         System.out.println(user2);
+        //User{id=2, name='Ted', balance=8150.0, monthsOfEmployment=6, companyName='City', salary=5000, bank=Bank{id=2, bankCountry='USA', currency=USD, numberOfEmployees=3000, avrSalaryOfEmployee=5000.0, rating=6000, totalCapital=15000000000}}
         bankSystem.transferMoney(user2, user3, 1000);
         System.out.println(user2);
+        //User{id=2, name='Ted', balance=7100.0, monthsOfEmployment=6, companyName='City', salary=5000, bank=Bank{id=2, bankCountry='USA', currency=USD, numberOfEmployees=3000, avrSalaryOfEmployee=5000.0, rating=6000, totalCapital=15000000000}}
         System.out.println(user3);
+        //User{id=3, name='Ivan', balance=4000.0, monthsOfEmployment=7, companyName='Metro', salary=3500, bank=Bank{id=3, bankCountry='Germany', currency=EUR, numberOfEmployees=1500, avrSalaryOfEmployee=3000.0, rating=4000, totalCapital=3000000000}}
 
         bankSystem.withdrawOfUser(user3, 1500);
         System.out.println(user3);
+        //User{id=3, name='Ivan', balance=2440.0, monthsOfEmployment=7, companyName='Metro', salary=3500, bank=Bank{id=3, bankCountry='Germany', currency=EUR, numberOfEmployees=1500, avrSalaryOfEmployee=3000.0, rating=4000, totalCapital=3000000000}}
         bankSystem.paySalary(user3);
         System.out.println(user3);
+        //User{id=3, name='Ivan', balance=5800.0, monthsOfEmployment=7, companyName='Metro', salary=3500, bank=Bank{id=3, bankCountry='Germany', currency=EUR, numberOfEmployees=1500, avrSalaryOfEmployee=3000.0, rating=4000, totalCapital=3000000000}}
         bankSystem.fundUser(user3, 1000);
         System.out.println(user3);
+        //User{id=3, name='Ivan', balance=6800.0, monthsOfEmployment=7, companyName='Metro', salary=3500, bank=Bank{id=3, bankCountry='Germany', currency=EUR, numberOfEmployees=1500, avrSalaryOfEmployee=3000.0, rating=4000, totalCapital=3000000000}}
         bankSystem.transferMoney(user3, user4, 1000);
         System.out.println(user3);
+        //User{id=3, name='Ivan', balance=5780.0, monthsOfEmployment=7, companyName='Metro', salary=3500, bank=Bank{id=3, bankCountry='Germany', currency=EUR, numberOfEmployees=1500, avrSalaryOfEmployee=3000.0, rating=4000, totalCapital=3000000000}}
         System.out.println(user4);
+        //User{id=4, name='Greg', balance=5000.0, monthsOfEmployment=8, companyName='Tesco', salary=4000, bank=Bank{id=4, bankCountry='Germany', currency=EUR, numberOfEmployees=2000, avrSalaryOfEmployee=3500.0, rating=4500, totalCapital=4000000000}}
 
         bankSystem.withdrawOfUser(user4, 1500);
         System.out.println(user4);
+        //User{id=4, name='Greg', balance=3440.0, monthsOfEmployment=8, companyName='Tesco', salary=4000, bank=Bank{id=4, bankCountry='Germany', currency=EUR, numberOfEmployees=2000, avrSalaryOfEmployee=3500.0, rating=4500, totalCapital=4000000000}}
         bankSystem.paySalary(user4);
         System.out.println(user4);
+        //User{id=4, name='Greg', balance=7280.0, monthsOfEmployment=8, companyName='Tesco', salary=4000, bank=Bank{id=4, bankCountry='Germany', currency=EUR, numberOfEmployees=2000, avrSalaryOfEmployee=3500.0, rating=4500, totalCapital=4000000000}}
         bankSystem.fundUser(user4, 1000);
         System.out.println(user4);
+        //User{id=4, name='Greg', balance=8280.0, monthsOfEmployment=8, companyName='Tesco', salary=4000, bank=Bank{id=4, bankCountry='Germany', currency=EUR, numberOfEmployees=2000, avrSalaryOfEmployee=3500.0, rating=4500, totalCapital=4000000000}}
         bankSystem.transferMoney(user4, user5, 1000);
         System.out.println(user4);
+        //User{id=4, name='Greg', balance=7260.0, monthsOfEmployment=8, companyName='Tesco', salary=4000, bank=Bank{id=4, bankCountry='Germany', currency=EUR, numberOfEmployees=2000, avrSalaryOfEmployee=3500.0, rating=4500, totalCapital=4000000000}}
         System.out.println(user5);
+        //User{id=5, name='Max', balance=6000.0, monthsOfEmployment=9, companyName='Tower', salary=500, bank=Bank{id=5, bankCountry='China', currency=USD, numberOfEmployees=1000, avrSalaryOfEmployee=500.0, rating=600, totalCapital=700000000}}
 
         bankSystem.withdrawOfUser(user5, 1500);
         System.out.println(user5);
