@@ -20,6 +20,38 @@ public class Room {
         this.cityName = cityName;
     }
 
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Room room = (Room) o;
+
+        if (price != room.price) return false;
+        if (persons != room.persons) return false;
+        return cityName != null ? cityName.equals(room.cityName) : room.cityName == null;
+    }
+
+    @Override
+    public int hashCode () {
+        int result = price;
+        result = 31 * result + persons;
+        result = 31 * result + (cityName != null ? cityName.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString () {
+        return "Room{" +
+                "id=" + id +
+                ", price=" + price +
+                ", persons=" + persons +
+                ", dateAvailableFrom=" + dateAvailableFrom +
+                ", hotelName='" + hotelName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                '}';
+    }
+
     public long getId () {
         return id;
     }
