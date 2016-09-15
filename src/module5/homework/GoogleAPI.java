@@ -17,7 +17,32 @@ public class GoogleAPI implements API {
     }
 
     @Override
-    public Room[] findRooms (int price, int persons, String city, String hotel) {
+    public Room[] getAllRooms () {
         return rooms;
+    }
+
+    @Override
+    public Room[] findRooms (int price, int persons, String city, String hotel) {
+
+        int foundRooms = 0;
+        int i = 0;
+        Room[] resultRooms;
+
+        for (Room room : rooms){
+            if (room.getPrice() == price && room.getPersons() == persons && room.getCityName().equals(city) && room.getHotelName().equals(hotel)){
+                foundRooms++;
+            }
+        }
+
+        if (foundRooms > 0) {
+            resultRooms = new Room[foundRooms];
+            for (Room room : rooms) {
+                if (room.getPrice() == price && room.getPersons() == persons && room.getCityName().equals(city) && room.getHotelName().equals(hotel)) {
+                    resultRooms[i] = room;
+                    i++;
+                }
+            }
+            return resultRooms;
+        } else return null;
     }
 }
