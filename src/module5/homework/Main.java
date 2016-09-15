@@ -39,22 +39,21 @@ public class Main {
         Room{id=11, price=500, persons=1, dateAvailableFrom=Thu Sep 15 12:27:54 EEST 2016, hotelName='Hilton Kyiv', cityName='Kyiv'} was saved to DB.
         Room{id=1, price=500, persons=1, dateAvailableFrom=Thu Sep 15 12:27:54 EEST 2016, hotelName='Hilton Kyiv', cityName='Kyiv'} was saved to DB.
         Room{id=11, price=500, persons=1, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Hilton Kyiv', cityName='Kyiv'}
-        Room{id=1, price=500, persons=1, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Hilton Kyiv', cityName='Kyiv'}
-        */
+        Room{id=1, price=500, persons=1, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Hilton Kyiv', cityName='Kyiv'} */
+
         printRequestedRooms(controller, 400, 2, "Kyiv", "Natsionalny Hotel");
         /* System output:
         Request to API for rooms: price = 400, persons = 2, city = 'Kyiv', hotel = 'Natsionalny Hotel'
         Room{id=13, price=400, persons=2, dateAvailableFrom=Thu Sep 15 12:27:54 EEST 2016, hotelName='Natsionalny Hotel', cityName='Kyiv'} was saved to DB.
-        Room{id=13, price=400, persons=2, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Natsionalny Hotel', cityName='Kyiv'}
-        */
+        Room{id=13, price=400, persons=2, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Natsionalny Hotel', cityName='Kyiv'} */
+
         printRequestedRooms(controller, 750, 3, "Kyiv", "Bontiak Hotel");
         /* System output:
         Request to API for rooms: price = 750, persons = 3, city = 'Kyiv', hotel = 'Bontiak Hotel'
         Room{id=15, price=750, persons=3, dateAvailableFrom=Thu Sep 15 12:27:54 EEST 2016, hotelName='Bontiak Hotel', cityName='Kyiv'} was saved to DB.
         Room{id=10, price=750, persons=3, dateAvailableFrom=Thu Sep 15 12:27:54 EEST 2016, hotelName='Bontiak Hotel', cityName='Kyiv'} was saved to DB.
         Room{id=15, price=750, persons=3, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Bontiak Hotel', cityName='Kyiv'}
-        Room{id=10, price=750, persons=3, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Bontiak Hotel', cityName='Kyiv'}
-        */
+        Room{id=10, price=750, persons=3, dateAvailableFrom=Thu Sep 15 11:54:20 EEST 2016, hotelName='Bontiak Hotel', cityName='Kyiv'} */
 
         API[] apis = controller.getApis();
         API api1 = apis[0];
