@@ -58,5 +58,4 @@ public class Task1_New_HW6_2 {
             double secondLargest: 3200.5
          */
     }
-
 }

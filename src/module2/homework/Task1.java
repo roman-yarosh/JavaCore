@@ -170,5 +170,4 @@ public class Task1 {
             double secondLargest: 3200.5
          */
     }
-
 }
