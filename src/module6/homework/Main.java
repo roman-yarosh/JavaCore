@@ -99,7 +99,5 @@ public class Main {
         User{id=3, firstName='Petr', lastName='Sverdlov', salary=300, balance=700}
         User{id=3, firstName='Petr', lastName='Sverdlov', salary=300, balance=700}
         User{id=2, firstName='Stepan', lastName='Petrov', salary=200, balance=500} */
-
-
     }
 }
