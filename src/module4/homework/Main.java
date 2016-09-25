@@ -1,6 +1,7 @@
 package module4.homework;
 
 public class Main {
+
     public static void main(String[] args){
         //Create Main class with main method, where you should create 6 Users: 2 of USBank, 2 of EUBank and 2 of ChinaBank.
         //Run four different operations with erery User’s baalance and print its objects to console.
@@ -134,4 +135,5 @@ public class Main {
         //User{id=1, name='Peter', balance=5635.0, monthsOfEmployment=5, companyName='Luxoft', salary=4500, bank=Bank{id=1, bankCountry='USA', currency=USD, numberOfEmployees=2000, avrSalaryOfEmployee=4500.0, rating=5000, totalCapital=5000000000}}
 
     }
+
 }
