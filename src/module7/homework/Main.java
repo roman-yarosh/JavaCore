@@ -134,5 +134,88 @@ public class Main {
         for (Map.Entry<String, List<Order>> entry : cityLists.entrySet()){
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
+        /*System output:
+
+        Source orders list:
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+        Order{id=2, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware3', user=User{id=2, firstName='Stepan', lastName='Stepanov', city='Lvov', balance=2000}}
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=6, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=6, firstName='Fedya', lastName='Fedov', city='Kiev', balance=6000}}
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+        Order{id=8, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=8, firstName='Max', lastName='Maxov', city='New York', balance=8000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=10, price=1000, currency=USD, itemName='HDD-e', shopIdentificator='Hardware4', user=User{id=10, firstName='Jenya', lastName='Jenin', city='Boston', balance=10000}}
+
+        Sort list by Order price in decrease order:
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+        Order{id=2, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware3', user=User{id=2, firstName='Stepan', lastName='Stepanov', city='Lvov', balance=2000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=6, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=6, firstName='Fedya', lastName='Fedov', city='Kiev', balance=6000}}
+        Order{id=8, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=8, firstName='Max', lastName='Maxov', city='New York', balance=8000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=10, price=1000, currency=USD, itemName='HDD-e', shopIdentificator='Hardware4', user=User{id=10, firstName='Jenya', lastName='Jenin', city='Boston', balance=10000}}
+
+        Sort list by Order price in increase order AND User city:
+        Order{id=10, price=1000, currency=USD, itemName='HDD-e', shopIdentificator='Hardware4', user=User{id=10, firstName='Jenya', lastName='Jenin', city='Boston', balance=10000}}
+        Order{id=6, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=6, firstName='Fedya', lastName='Fedov', city='Kiev', balance=6000}}
+        Order{id=2, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware3', user=User{id=2, firstName='Stepan', lastName='Stepanov', city='Lvov', balance=2000}}
+        Order{id=8, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=8, firstName='Max', lastName='Maxov', city='New York', balance=8000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+
+        Sort list by Order itemName AND ShopIdentificator AND User city:
+        Order{id=6, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=6, firstName='Fedya', lastName='Fedov', city='Kiev', balance=6000}}
+        Order{id=8, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=8, firstName='Max', lastName='Maxov', city='New York', balance=8000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=2, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware3', user=User{id=2, firstName='Stepan', lastName='Stepanov', city='Lvov', balance=2000}}
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+        Order{id=10, price=1000, currency=USD, itemName='HDD-e', shopIdentificator='Hardware4', user=User{id=10, firstName='Jenya', lastName='Jenin', city='Boston', balance=10000}}
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+
+        Delete duplicates from the list:
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=2, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware3', user=User{id=2, firstName='Stepan', lastName='Stepanov', city='Lvov', balance=2000}}
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+        Order{id=8, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=8, firstName='Max', lastName='Maxov', city='New York', balance=8000}}
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+        Order{id=4, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=4, firstName='Sidor', lastName='Sidorov', city='Odessa', balance=4000}}
+        Order{id=10, price=1000, currency=USD, itemName='HDD-e', shopIdentificator='Hardware4', user=User{id=10, firstName='Jenya', lastName='Jenin', city='Boston', balance=10000}}
+        Order{id=6, price=1000, currency=USD, itemName='HDD-a', shopIdentificator='Hardware2', user=User{id=6, firstName='Fedya', lastName='Fedov', city='Kiev', balance=6000}}
+
+        Delete items where price less than 1500:
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+
+        Separate list for two list - orders in USD and UAH:
+
+        Separated USD list:
+        Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}
+        Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}
+
+        Separated UAH list:
+        Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}
+        Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}}
+
+        Separate list for as many lists as many unique cities are in User:
+        Dnepr [Order{id=3, price=10200, currency=USD, itemName='HDD-k', shopIdentificator='Hardware1', user=User{id=3, firstName='Petr', lastName='Petrov', city='Dnepr', balance=3000}}]
+        Kharkov [Order{id=5, price=10100, currency=UAH, itemName='HDD-m', shopIdentificator='Hardware1', user=User{id=5, firstName='Dima', lastName='Dimov', city='Kharkov', balance=5000}}]
+        Kiev [Order{id=1, price=10000, currency=UAH, itemName='HDD-c', shopIdentificator='Hardware1', user=User{id=1, firstName='Ivan', lastName='Ivanov', city='Kiev', balance=1000}},
+              Order{id=7, price=10400, currency=USD, itemName='HDD-s', shopIdentificator='Hardware1', user=User{id=7, firstName='Misha', lastName='Mishev', city='Kiev', balance=7000}}]
+        */
     }
 }
