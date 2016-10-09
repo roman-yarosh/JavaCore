@@ -3,7 +3,6 @@ package module7.homework;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 public class ListsTest {
 
