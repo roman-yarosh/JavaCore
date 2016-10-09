@@ -58,4 +58,8 @@ public class User {
     public String getCity() {
         return city;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
 }
