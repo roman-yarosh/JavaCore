@@ -22,11 +22,13 @@ public class Main {
         //Add list of users to DB
         System.out.println("Add list of users  to DB: " + users);
         userDAO.saveAll(users);
-        //Add list of users  to DB: [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'}, User{id=4, name='Dima'}, User{id=5, name='Max'}]
+        //Add list of users  to DB: [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'},
+        // User{id=4, name='Dima'}, User{id=5, name='Max'}]
 
         //Select all from DB (DB is not empty)
         System.out.println("Select all from DB (DB is not empty): " + userDAO.getList());
-        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'}, User{id=4, name='Dima'}, User{id=5, name='Max'}]
+        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'},
+        // User{id=4, name='Dima'}, User{id=5, name='Max'}]
 
         //Delete user5 from DB
         System.out.println("Delete user5 from DB");
@@ -35,7 +37,8 @@ public class Main {
 
         //Select all from DB (DB is not empty)
         System.out.println("Select all from DB (DB is not empty): " + userDAO.getList());
-        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'}, User{id=4, name='Dima'}]
+        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'},
+        // User{id=4, name='Dima'}]
 
         //Save user5 to DB
         System.out.println("Save user5 to DB");
@@ -44,7 +47,8 @@ public class Main {
 
         //Select all from DB (DB is not empty)
         System.out.println("Select all from DB (DB is not empty): " + userDAO.getList());
-        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'}, User{id=4, name='Dima'}, User{id=5, name='Max'}]
+        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'},
+        // User{id=4, name='Dima'}, User{id=5, name='Max'}]
 
         //Delete all users (that in input list) from DB
         System.out.println("Delete all users (that in input list) from DB");
