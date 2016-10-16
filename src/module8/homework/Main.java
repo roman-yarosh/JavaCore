@@ -1,6 +1,5 @@
 package module8.homework;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -55,12 +54,5 @@ public class Main {
         //Select all from DB (DB is empty)
         System.out.println("Select all from DB (DB is not empty): " + userDAO.getList());
         //Select all from DB (DB is not empty): []
-=======
-public class Main {
-
-    public static void main (String[] args) {
-
-        System.out.println("");
->>>>>>> origin/master
     }
 }
