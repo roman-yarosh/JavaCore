@@ -50,6 +50,20 @@ public class Main {
         //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'},
         // User{id=4, name='Dima'}, User{id=5, name='Max'}]
 
+        //Get user by it's long id = 5 from DB
+        System.out.println("Get user by it's long id = 5 from DB: " + userDAO.get(5));
+        //Get user by it's long id = 5 from DB: User{id=5, name='Max'}
+
+        //Delete user by it's long id = 5 from DB
+        System.out.println("Delete user by it's long id = 5 from DB");
+        userDAO.deleteById(5);
+        //Delete user by it's long id = 5 from DB
+
+        //Select all from DB (DB is not empty)
+        System.out.println("Select all from DB (DB is not empty): " + userDAO.getList());
+        //Select all from DB (DB is not empty): [User{id=1, name='Ivan'}, User{id=2, name='Petr'}, User{id=3, name='Stepan'},
+        // User{id=4, name='Dima'}}]
+
         //Delete all users (that in input list) from DB
         System.out.println("Delete all users (that in input list) from DB");
         userDAO.deleteAll(users);
