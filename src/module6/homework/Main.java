@@ -99,5 +99,28 @@ public class Main {
         User{id=3, firstName='Petr', lastName='Sverdlov', salary=300, balance=700}
         User{id=3, firstName='Petr', lastName='Sverdlov', salary=300, balance=700}
         User{id=2, firstName='Stepan', lastName='Petrov', salary=200, balance=500} */
+
+
+        System.out.println("");
+        System.out.println("");
+
+        User user10 = new User(3,"Kostya","Testov",500,800);
+        User user11 = new User(4,"Stepan","Petrov",200,300);
+        User user12 = new User(1,"Ivan","Ivanov",100,200);
+        User user13 = new User(1,"Ivan","Ivanov",100,200);
+        User user14 = new User(1,"Ivan","Ivanov",100,200);
+        User[] users2 = {user10, user11, user12, user13, user14};
+
+        System.out.println("\nSource Users array:");
+        for (User user : users2){
+            System.out.println(user);
+        }
+
+        System.out.println("\nTest fot uniqueUsers method:");
+        for (User user : UserUtils.uniqueUsers(users2)){
+            System.out.println(user);
+        }
+
+
     }
 }
