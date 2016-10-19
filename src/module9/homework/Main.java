@@ -1,12 +1,7 @@
-package module8.homework;
-
-import java.util.HashMap;
-import java.util.Map;
+package module9.homework;
 
 public class Main {
     public static void main (String[] args) {
-
-
         System.out.println("");
     }
 }
