@@ -1,14 +1,14 @@
 package module9.homework;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 import module7.homework.Currency;
 import module7.homework.Order;
 import module7.homework.User;
-import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Main {
 
