@@ -1,4 +1,4 @@
-package module10;
+package module10.practice;
 
 import java.io.*;
 import java.util.ArrayList;
