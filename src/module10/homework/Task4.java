@@ -6,15 +6,19 @@ public class Task4 {
         try {
             g();
         } catch (MyException1 myException1) {
+            System.out.println(myException1.getMessage());
             System.out.println("Catch MyException1!");
         }
 
         try {
             f();
         } catch (MyException2 myException2) {
+            System.out.println(myException2.getMessage());
             System.out.println("Catch MyException2!");
         }
+        //MyException1 from method g()!
         //Catch MyException1!
+        //MyException2 from method f() in catch block!
         //Catch MyException2!
     }
 
