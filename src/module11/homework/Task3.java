@@ -55,7 +55,7 @@ public class Task3 {
         String replaced = replacer(fileName, map);
 
         try {
-            fileWriter = new FileWriter(fileName, true);
+            fileWriter = new FileWriter(fileName, true); //Append mode for FileWriter
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.append(System.lineSeparator());
             bufferedWriter.append(replaced);
