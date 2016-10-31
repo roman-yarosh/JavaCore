@@ -1,9 +1,6 @@
 package module11.homework;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,15 +11,16 @@ public class Task1 {
 
     public static void main (String[] args) {
 
+        String fileName = "D:/file.txt";
         Map<String, String> map = new HashMap<>();
         map.put("lesson", "topic");
         map.put("Lesson", "Topic");
         String result;
 
-        result = replacer(map);
+        result = replacer(fileName, map);
         if (!result.equals("")) System.out.println("\nResult string after replacement:\n" + result);
         /* System output:
-        Source file:
+        Read from file:
         Lesson: Basic I/O
 
         This lesson covers the Java platform classes used for basic I/O. It first focuses on I/O Streams, a powerful concept that greatly simplifies I/O operations. The lesson also looks at serialization, which lets a program write whole objects out to streams and read them back again. Then the lesson looks at file I/O and file system operations, including random access files.
@@ -38,42 +36,61 @@ public class Task1 {
         */
     }
 
-    static String replacer(Map<String, String> map) {
-        BufferedReader bufferedReader;
+    static String replacer (String fileName, Map<String, String> map) {
+        String resultString;
+
+        resultString = readFile(fileName);
+        if (resultString != null) {
+            System.out.println("Read from file:\n" + resultString);
+        }
+
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            try {
+                resultString = resultString.replaceAll(entry.getKey(), entry.getValue());
+            } catch (NullPointerException e){
+                System.err.println("NullPointerException exception in foreach map!");
+            }
+        }
+
+        return resultString;
+    }
+
+    static String readFile (String fileName) {
         FileReader fileReader;
+        BufferedReader bufferedReader;
         StringBuilder stringBuilder;
 
         try {
-            fileReader = new FileReader("D:/file.txt");
+            fileReader = new FileReader(fileName);
             bufferedReader = new BufferedReader(fileReader);
         } catch (FileNotFoundException e) {
-            System.out.println("File not found exception!");
-            return "";
+            System.err.println("File not found exception!");
+            return null;
         }
 
         try {
             stringBuilder = new StringBuilder();
             String lineFromFile = bufferedReader.readLine();
-            if (lineFromFile != null) System.out.println("Source file:");
             while (lineFromFile != null) {
-                System.out.println(lineFromFile);
-                for (Map.Entry<String, String> entry : map.entrySet()){
-                    lineFromFile = lineFromFile.replaceAll(entry.getKey(), entry.getValue());
-                }
                 stringBuilder.append(lineFromFile);
-                stringBuilder.append(System.lineSeparator());
                 lineFromFile = bufferedReader.readLine();
+                if (lineFromFile != null) stringBuilder.append(System.lineSeparator());
             }
         } catch (IOException e) {
-            System.err.format("IOException: %s%n", e);
-            return "";
+            System.err.format("IOException in readFile() method: %s%n", e);
+            return null;
         } finally {
             try {
-                bufferedReader.close();
+                if (bufferedReader != null)
+                    bufferedReader.close();
+                if (fileReader != null)
+                    fileReader.close();
             } catch (IOException e) {
-                System.out.println("Can't close bufferedReader!");
+                System.err.format("IOException while closing resources: %s%n", e);
             }
         }
+
         return stringBuilder.toString();
     }
+
 }
