@@ -73,8 +73,8 @@ public class Task1 {
             String lineFromFile = bufferedReader.readLine();
             while (lineFromFile != null) {
                 stringBuilder.append(lineFromFile);
+                stringBuilder.append(System.lineSeparator());
                 lineFromFile = bufferedReader.readLine();
-                if (lineFromFile != null) stringBuilder.append(System.lineSeparator());
             }
         } catch (IOException e) {
             System.err.format("IOException in readFile() method: %s%n", e);
